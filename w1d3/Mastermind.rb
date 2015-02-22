@@ -25,9 +25,8 @@ class Mastermind
 
   def get_move
     print 'What is your guess?'
-    guess = gets.chomp.split('')
+    gets.chomp.split('')
   end
-end
 
 end
 
