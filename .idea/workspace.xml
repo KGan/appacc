@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="99cf3dfb-3407-4f3c-b496-b7f34abe2e62" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/w1d3/Mastermind.rb" afterPath="$PROJECT_DIR$/w1d3/Mastermind.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/appacc.iml" afterPath="$PROJECT_DIR$/.idea/appacc.iml" />
     </list>
     <ignored path="appacc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="Mastermind.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/w1d3/Mastermind.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27916667" vertical-offset="219" max-vertical-offset="960">
-              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.25833333" vertical-offset="219" max-vertical-offset="960">
+              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -274,8 +273,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/w1d3/Mastermind.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27916667" vertical-offset="219" max-vertical-offset="960">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.25833333" vertical-offset="219" max-vertical-offset="960">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
           <folding />
         </state>
       </provider>
