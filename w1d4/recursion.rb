@@ -64,9 +64,9 @@ end
 
 def make_change(money, coins)
   vals = []
-  coins.each do |coin|
+  coins.each_with_index do |coin, index|
     return [coin] if money == coin
-    vals << [coin] + make_change(money-coin, coins) if money-coin > 0
+    vals << [coin] + make_change(money-coin, coins.drop(index)) if money-coin > 0
   end
   vals.min_by { |combination| combination.size }
 end
