@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99cf3dfb-3407-4f3c-b496-b7f34abe2e62" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/w1d3/Mastermind.rb" afterPath="$PROJECT_DIR$/w1d3/Mastermind.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testing_stuff/not_so_private.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="appacc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Mastermind.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Mastermind.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/w1d3/Mastermind.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25833333" vertical-offset="219" max-vertical-offset="960">
+            <state vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="960">
               <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="not_so_private.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testing_stuff/not_so_private.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5013928" vertical-offset="0" max-vertical-offset="718">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -49,6 +60,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/w1d3/Mastermind.rb" />
+        <option value="$PROJECT_DIR$/testing_stuff/not_so_private.rb" />
       </list>
     </option>
   </component>
@@ -112,6 +124,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="w1d3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appacc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appacc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testing_stuff" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -273,8 +299,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/w1d3/Mastermind.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25833333" vertical-offset="219" max-vertical-offset="960">
+        <state vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="960">
           <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing_stuff/not_so_private.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5013928" vertical-offset="0" max-vertical-offset="718">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding />
         </state>
       </provider>
