@@ -27,7 +27,6 @@ class Mastermind
     print 'What is your guess?'
     guess = gets.chomp.split('')
   end
-end
 
 end
 
