@@ -43,7 +43,7 @@ class Wall
     # possible_rows
     generate_all_rows
     create_all_legal_neighbors(@all_rows)
-    run_dynamic_programming(@all_rows)
+    puts run_dynamic_programming(@all_rows)
   end
 
   def create_all_legal_neighbors(all_rows)
