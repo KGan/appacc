@@ -16,10 +16,22 @@ def bool_dps(bool_array, opp_arr)
   # initialize our array
   (0...bool_array.length).each do |i|
     mat[i][i] = 1 if bool_array[i]
+    next if (i + 1) == bool_array.length
+    bc = bool_array[i]
+    bn = bool_array[i+1]
+
+    case opp_arr[i]
+    when '^'
+      mat[i][i+1] = 1 if bc && bn
+    when 'x'
+      mat[i][i+1] = 1 if bc ^ bn
+    when 'v'
+      mat[i][i+1] = 1 if bc || bn
+    end
   end
 
-  (1...mat.length).each do |j|  # j - 1 is to the left, i + 1 is down, doing mat[i][j]
-    (j - 1).downto(0).each do |i|
+  (2...mat.length).each do |j|  # j - 1 is to the left, i + 1 is down, doing mat[i][j]
+    (j - 2).downto(0).each do |i|
       size = [2 ** (j - i - 2), 1].max
       left_sum = mat_sum(bool_array[j], opp_arr[j - 1], mat[i][j-1], size)
       right_sum = mat_sum(bool_array[i], opp_arr[i], mat[i + 1][j], size)
@@ -27,14 +39,15 @@ def bool_dps(bool_array, opp_arr)
     end
   end
 
-  # bool_array_strings = bool_array.map { |bool| bool ? 'T' : 'F' }
-
+  bool_array_strings = bool_array.map { |bool| bool ? 'T' : 'F' }
+  print_arr = bool_array_strings.zip(opp_arr).flatten.compact
 
   # print '    ' + bool_array.join(' ') + "\n"
+  print '    ' + print_arr.join('  ') + "\n"
   mat.each_with_index do |row, r|
     # print word1[r-1] + ' '
     row.each_with_index do |val, c|
-      print val.to_s + " "
+      print "%5s" % val + " "
     end
     print "\n"
   end
@@ -52,44 +65,18 @@ def mat_sum(bool, opp, prev_mat, size)
   end
 end
 
+ops = %w(x ^ v)
+loop do
+  system('clear')
+  bool_array, ops_array = [], []
+  18.times do
+    bool_array << rand(100).odd?
+    ops_array << ops[rand(1000) % 3]
+  end
+  bool_array << rand(2).odd?
 
-bool_dps([false, false, true, false, true], %w(x ^ v v))
+  bool_dps(bool_array, ops_array)
+  gets
+end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# sum_at_right = case opp_arr[j - 1]
-# when '^'
-#   bool_array[j] ? mat[i][j-1] : 0
-# when 'v'
-#   bool_array[j] ? 2 ** (i - j - 1) : mat[i][j-1]
-# when 'x'
-#   bool_array[j] ? 2 ** (i - j - 1) - mat[i][j-1] : mat[i][j-1]
-# end
-# sum_at_left = case opp_arr[i]
-# when '^'
-#   bool_array[i] ? mat[i+1][j] : 0
-# when 'v'
-#   bool_array[i] ? 2 ** (i - j - 1) : mat[i+1][j]
-# when 'x'
-#   bool_array[i] ? 2 ** (i - j - 1) - mat[i+1][j] : mat[i+1][j]
-# end
+# bool_dps([false, false, true, false, true], %w(x ^ v v))
