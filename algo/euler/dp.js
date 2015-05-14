@@ -72,7 +72,60 @@ function chocodistance(target, first, second) {
   return mat[first.length][second.length];
 }
 
+// Dijkstra's algorithm
+
+function PriorityQueue(comp) {
+  this.comp = comp || function(a,b) { return a < b; };
+  this.pq = [];
+  this._hash = {};
+}
+
+PriorityQueue.prototype = {
+  add: function(el){
+
+  },
+  update: function(el, val) {
+
+  },
+  has: function(el) {
+
+  },
+  upheap: function() {
+  },
+  downheap: function() {
+  }
+};
+
+function PQElem(key, val) {
+  this.key = key;
+  this.val = val;
+}
+
+function dijkstra(source) {
+  var cur,children,locked = {};
+  var pq = new PriorityQueue();
+  pq.add(source);
+  while (cur = pq.pop()) {
+    children = cur.outEdges();
+    children.forEach(function(e) {
+      var v = e.to();
+      if (locked[v]) return;
+      if (pq.has(v)) {
+        pq.update(v, e.cost);
+      } else {
+        pq.add(v, e.cost);
+      }
+      locked[cur] = true;
+    });
+  }
+}
+
+
 
 
 // console.log(chocodistance('chocolatechips', 'chocolate', 'chips'));
-console.log(chocodistance('cchohicopslate', 'chocolate', 'chips'))
+console.log(chocodistance('cchohicopslate', 'chocolate', 'chips'));
+
+
+//NOT SO DBP//
+

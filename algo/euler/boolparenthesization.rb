@@ -1,14 +1,5 @@
 # puts 'Bools? eg(TFTTFTFFTFT)'
-# bool_array = []
-# bool_strings = []
-# op_arr = []
-# gets.chomp.strip.split('').each do |char|
-#   bool_array << (char == 'T')
-#   bool_strings << char
-# end
-# puts 'operators? eg(^vx)'
-# op_arr = gets.chomp.strip.split('')
-# raise "need at least n-1 operators" if op_arr.length < bool_array
+#
 
 def bool_dps(bool_array, opp_arr)
   mat = Array.new(bool_array.length) { Array.new(bool_array.length, 0) }

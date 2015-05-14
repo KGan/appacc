@@ -9,7 +9,6 @@ def integer_partition(set)
     row[0] = 0
   end
   mat[0][0] = 1
-  p mat[0]
   mat[1..-1].each_with_index do |row, ri|
     row.each_with_index do |sum, si|
       prev_sum = mat[0..ri].inject(0) { |acc, row| si - set[ri] < 0 ? 0 : acc + row[si - set[ri]] }
@@ -42,3 +41,4 @@ end
 
 
 integer_partition([7,8,5,4,6,3,2,1])
+integer_partition([1,8,10])

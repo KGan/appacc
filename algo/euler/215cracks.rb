@@ -62,12 +62,10 @@ class Wall
       walls_new = walls.dup
       walls.each_index do |wall_index|
         walls_new[wall_index] = all_rows[wall_index].legal_neighbors.inject(0) do |sum, neighbor|
-          # puts sum ? "#{sum} #{wall_index} #{neighbor}" : "$$\n"
           sum + walls[neighbor]
         end
       end
       walls = walls_new
-      # print "Walls : #{walls}\n"
     end
     walls.inject(:+)
   end

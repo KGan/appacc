@@ -38,6 +38,7 @@ end
 
 
 def chocolate_distance(target, word1, word2)
+  puts target
   mat = Array.new(word1.length + 1) { Array.new(word2.length + 1) }
   # (0..word1.length).each do |i|
   #   mat[i][0] = false
@@ -78,6 +79,7 @@ def chocolate_distance(target, word1, word2)
     end
     print "\n"
   end
+  mat.last.last
 end
 
 
@@ -113,12 +115,43 @@ def knapsack_distance(stuff, target)
   nil
 end
 
-
-[[0,1],[0,-1]][[:white, :black].index(color)]
-
-case color
-when :white
-  [0,1]
-when :black
-  [0,-1]
+def smallshuffle(arr, number)
+  number.times do
+    i, j = Integer(rand((arr.length/2)..arr.length)), Integer(rand((arr.length/2)..arr.length))
+    arr[i], arr[j] = arr[j], arr[i]
+  end
+  arr
 end
+
+def interleave(word1,word2,scrambled=false)
+  word1arr = word1.split('')
+  word2arr = word2.split('')
+  if scrambled
+    word1arr = smallshuffle(word1arr, rand(1..3))
+    word2arr = smallshuffle(word2arr, rand(4))
+  end
+  arr = [word1arr,word2arr]
+  interleaved = ''
+  until arr[0].empty? && arr[1].empty?
+    ind = rand(2)
+    word = arr[ind]
+    word = arr[(ind+1)%2] if word.empty?
+    next if word.empty?
+    char = word.shift
+    interleaved+=char if char
+  end
+  interleaved
+end
+
+def woven_distance(word1, word2, scrambled=false)
+  chocolate_distance(interleave(word1, word2, scrambled), word1, word2)
+end
+#
+# [[0,1],[0,-1]][[:white, :black].index(color)]
+#
+# case color
+# when :white
+#   [0,1]
+# when :black
+#   [0,-1]
+# end

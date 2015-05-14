@@ -8,7 +8,15 @@ Function.prototype.myBind = function(context) {
     var calltime_args = Array.prototype.slice.call(arguments)
     fn.apply(context, Array.prototype.concat.call(args, calltime_args))
   }
-}
+};
+
+(function () {
+  if (window.THING === 'undefined') {
+    window.THING = {};
+  }
+
+
+})();
 
 
 function myinherits(child, parent) {
@@ -63,4 +71,15 @@ function bsearch(arr, target) {
   return bsearch(arr.slice(idx+1), target, saved_idx + idx + 1)
 }
 
-console.log(bsearch([1,3,5,12,18,22,345], 12))
+//console.log(bsearch([1,3,5,12,18,22,345], 12))
+
+function subsets(arr) {
+  if (arr.length < 1) {
+    return [[], arr];
+  }
+
+  var el = arr.pop();
+  var prev = subsets(arr);
+  var retarr = [];
+
+}
